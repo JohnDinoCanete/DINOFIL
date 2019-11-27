@@ -1,7 +1,7 @@
-body{
+.body{
     margin: 0;
     padding: 0;
-    background: url(image.jpg);
+    background: url('sea.jpg');
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
@@ -77,8 +77,9 @@ h1{
 {
     color: #39dc79;
 }
-
-
+.img{
+    width: 150px;;
+}
 
 
 

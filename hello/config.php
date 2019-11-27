@@ -1,15 +1,16 @@
 <?php
-$host = 'localhost';
-$mydatabase = 'mydatabase';
-$username = 'root'; #root;
-$password = ''; #blank;
-​
-try{
-    $conn = new PDO("mysql:host = {$host}; dbname = {$mydatabase} ", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+$databaseHost = 'localhost';
+$databaseName = 'mydatabase';
+$databaseUsername = 'root';
+$databasePassword = '';
+try {
+	// http://php.net/manual/en/pdo.connections.php
+	$dbConn = new PDO("mysql:host={$databaseHost};dbname={$databaseName}", $databaseUsername, $databasePassword);
+	
+	$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Setting Error Mode as Exception
+	// More on setAttribute: http://php.net/manual/en/pdo.setattribute.php
+} catch(PDOException $e) {
+	echo $e->getMessage();
 }
-catch(PDOException $e){
-    echo $e->getMessage();
-}
+ 
 ?>
