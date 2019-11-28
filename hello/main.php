@@ -32,10 +32,13 @@
       <a class="nav-link" data-toggle="tab" href="#menu2">Foods & Drinks</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu3">Transportation</a>
+      <a class="nav-link" data-toggle="tab" href="#" style="color:white;">dsssssssssss</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#" style="color:white;">addadadadadsddsdsdsdsdsdsdsadasdsdsssssssdadadadadadadadadadadadada</a>
+      <a class="nav-link" data-toggle="tab" href="#" style="color:white;">addsssssssssssssssssssdsssssssdadadadadadadadadadadadada</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu3">Transactions</a>
     </li>
     <li class="nav-item" >
       <a class="nav-link" href="logout.php" style="color:red;">Logout</a>
@@ -94,7 +97,7 @@
   <div class="col-sm-12">
     
   <img src="food.jpg">
-  <a href="foodorder.php"><button type="button" class="btn btn-success">Order</button></a>
+  <a href="foodorder.php"><button type="button" class="btn btn-success" name="starbucks">Order</button></a>
 </div>
   
 </div>
@@ -124,11 +127,11 @@
 </div>
     </div>
     <div id="menu3" class="container tab-pane fade"><br>
-      <h3>Transporation</h3>
+      <h3>Transactions</h3>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
     </div>
   </div>
 </div>
 
 </body>
-</html>
+</html>  

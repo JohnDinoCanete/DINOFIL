@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Book Site</title>
+	<link rel="stylesheet" type="text/css" href="hotelserver.css">
 </head>
 
 <body>
@@ -55,10 +56,15 @@ if(isset($_POST['Submit'])) {
 		// $query->execute(array(':name' => $name, ':email' => $email, ':age' => $age));
 		
 		//display success message
-		echo "<center><strong><font color='green'>Booked Successfuly.</strong></center>";
-		echo "<center><strong><br/><a href='main.php'>Home</a></strong></center>";
 	}
 }
 ?>
+<center>
+<div class="food">
+<img src="motor.gif" width="350px;"><br>
+<h1><font color='green'>Your Driver is on the way.</h1><br>
+<a href="main.php"><img src="arrow.jpg" width="150px;"></a>
+</center>
+</div>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="hotel.css">
   <style type="text/css">
   body{
-	background-image: url(log.jpg);
+	background-image: url(hotelbook.jpg);
 	background-attachment:fixed;
 	background-size:cover;
   }

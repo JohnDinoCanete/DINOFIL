@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="hotel.css">
   <style type="text/css">
   body{
-	background-image: url(log.jpg);
+	background-image: url(hotel.jpg);
 	background-attachment:fixed;
 	background-size:cover;
   }
@@ -27,7 +27,7 @@
 	
   <div class="login-box">
 
-    <img src="avatar.png" class="avatar">
+    <img src="avatar.png" class="avatar"> 
         <h1>Enter your information</h1>
         <strong style="color:red;">Note: We hide your information for your safety!</strong>
             <form action="hotelserver.php" method="POST" style="width:200px;" required>
