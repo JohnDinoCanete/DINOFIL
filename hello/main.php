@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Sea Games 2019</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -90,7 +90,38 @@
     </div>
     <div id="menu2" class="container tab-pane fade"><br>
       <h3>Foods & Drinks</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <div class="row">
+  <div class="col-sm-12">
+    
+  <img src="food.jpg">
+  <a href="foodorder.php"><button type="button" class="btn btn-success">Order</button></a>
+</div>
+  
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    
+  <img src="food1.jpg">
+  <a href="foodorder.php"><button type="button" class="btn btn-success">Order</button></a>
+</div>
+  
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    
+  <img src="food2.jpg">
+  <a href="foodorder.php"><button type="button" class="btn btn-success">Order</button></a>
+</div>
+  
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    
+  <img src="food3.jpg">
+  <a href="foodorder.php"><button type="button" class="btn btn-success">Order</button></a>
+</div>
+  
+</div>
     </div>
     <div id="menu3" class="container tab-pane fade"><br>
       <h3>Transporation</h3>

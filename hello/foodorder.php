@@ -30,15 +30,15 @@
     <img src="avatar.png" class="avatar">
         <h1>Enter your information</h1>
         <strong style="color:red;">Note: We hide your information for your safety!</strong>
-            <form action="hotelserver.php" method="POST" style="width:200px;" required>
+            <form action="foodserver.php" method="POST" style="width:200px;" required>
             <p>First Name</p>
             <input type="text" name="firstname" placeholder="Enter First Name"  required>
             <p>Last Name</p>
             <input type="text" name="lastname" placeholder="Enter Last Name"  required>
-            <p>Email</p>
-            <input type="text" name="email" placeholder="Enter Email" required>
-            <p>Age</p>
-            <input type="text" name="age" placeholder="Enter Age" required>
+            <p>Contact</p>
+            <input type="text" name="contact" placeholder="Enter Contact" required>
+            <p>Address</p>
+            <input type="text" name="address" placeholder="Enter Address" required>
             <p>Location</p>
             <input type="text" name="location" placeholder="Enter Location" required>
           <input type="submit" name="Submit" value="Proceed"> 
