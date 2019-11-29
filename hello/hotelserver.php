@@ -13,12 +13,10 @@ include_once("config.php");
 if(isset($_POST['Submit'])) {	
   $fname = $_POST['firstname'];
   $lname = $_POST['lastname'];
-  $email = $_POST['email'];
-	$age = $_POST['age'];
-	$location = $_POST['location'];
+  $scard = $_POST['card'];
 		
 	// checking empty fields
-	if(empty($fname) || empty($lname) || empty($email) || empty($age) || empty($location)) {
+	if(empty($fname) || empty($lname) || empty($scard)) {
 				
 		if(empty($fname)) {
 			echo "<font color='red'>Name field is empty.</font><br/>";
@@ -28,32 +26,17 @@ if(isset($_POST['Submit'])) {
 			echo "<font color='red'>Age field is empty.</font><br/>";
 		}
 		
-		if(empty($email)) {
+		if(empty($card)) {
 			echo "<font color='red'>Email field is empty.</font><br/>";
     }
-    if(empty($age)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}
     
-    if(empty($location)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}
-		
-		
-		//link to the previous page
-		echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
-	} else { 
-		// if all the fields are filled (not empty) 
-			
 		//insert data to database		
-		$sql = "INSERT INTO hotel_tbl(firstname,lastname,email, age, location) VALUES(:firstname, :lastname, :email, :age, :location)";
+		$sql = "INSERT INTO hotel_tbl(firstname,lastname,card)VALUES(:firstname, :lastname, :card)";
 		$query = $dbConn->prepare($sql);		
     $query->bindparam(':firstname', $fname);
     $query->bindparam(':lastname', $lname);
-    $query->bindparam(':email', $email);
-		$query->bindparam(':age', $age);
-    $query->bindparam(':location', $location);
-    $query->execute(array(':firstname' => $fname,':lastname' => $lname,':email' => $email, ':age' => $age, ':location' => $location));
+    $query->bindparam(':card', $scard);
+    $query->execute(array(':firstname' => $fname,':lastname' => $lname,':card' => $s		card));
 		// Alternative to above bindparam and execute
 		// $query->execute(array(':name' => $name, ':email' => $email, ':age' => $age));
 		
@@ -61,7 +44,7 @@ if(isset($_POST['Submit'])) {
 
 	}
 }
-?>
+?>	
 
 	<div class="hotel">
 	<center>

@@ -1,9 +1,11 @@
 <html>
 <head>
-	<title>Book Site</title>
-	<link rel="stylesheet" type="text/css" href="hotelserver.css">
+	<title>Hotel Book Site</title>
 </head>
+<style>
 
+
+</style>
 <body>
 <?php
 //including the database connection file
@@ -11,12 +13,12 @@ include_once("config.php");
 if(isset($_POST['Submit'])) {	
   $fname = $_POST['firstname'];
   $lname = $_POST['lastname'];
-  $contact = $_POST['contact'];
-	$add = $_POST['address'];
-	$location = $_POST['location'];
+  $card = $_POST['card'];
+  $food = $_POST['food'];
+  $qua = $_POST['qua'];
 		
 	// checking empty fields
-	if(empty($fname) || empty($lname) || empty($contact) || empty($add) || empty($location)) {
+	if(empty($fname) || empty($lname) || empty($card) || empty($food) || empty($qua)) {
 				
 		if(empty($fname)) {
 			echo "<font color='red'>Name field is empty.</font><br/>";
@@ -26,39 +28,38 @@ if(isset($_POST['Submit'])) {
 			echo "<font color='red'>Age field is empty.</font><br/>";
 		}
 		
-		if(empty($contact)) {
+		if(empty($card)) {
 			echo "<font color='red'>Email field is empty.</font><br/>";
-    }
-    if(empty($add)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}
+	}
+		
+	if(empty($food)) {
+		echo "<font color='red'>Email field is empty.</font><br/>";
+}
+
+	
+if(empty($qua)) {
+	echo "<font color='red'>Email field is empty.</font><br/>";
+}
+
     
-    if(empty($location)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}
-		
-		
-		//link to the previous page
-		echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
-	} else { 
-		// if all the fields are filled (not empty) 
-			
 		//insert data to database		
-		$sql = "INSERT INTO food_tbl(firstname,lastname,contact, address, location) VALUES(:firstname, :lastname, :contact, :address, :location)";
+		$sql = "INSERT INTO food_tbl(firstname,lastname,card,food,qua)VALUES(:firstname, :lastname, :card, :food, :qua)";
 		$query = $dbConn->prepare($sql);		
     $query->bindparam(':firstname', $fname);
     $query->bindparam(':lastname', $lname);
-    $query->bindparam(':contact', $contact);
-		$query->bindparam(':address', $add);
-    $query->bindparam(':location', $location);
-    $query->execute(array(':firstname' => $fname,':lastname' => $lname,':contact' => $contact, ':address' => $add, ':location' => $location));
+	$query->bindparam(':card', $card);
+	$query->bindparam(':food', $food);
+	$query->bindparam(':qua', $qua);
+    $query->execute(array(':firstname' => $fname,':lastname' => $lname,':card' => $card ,':food' => $food ,':qua' => $qua));
 		// Alternative to above bindparam and execute
 		// $query->execute(array(':name' => $name, ':email' => $email, ':age' => $age));
 		
 		//display success message
+
 	}
 }
-?>
+?>	
+
 <center>
 <div class="food">
 <img src="motor.gif" width="350px;"><br>
